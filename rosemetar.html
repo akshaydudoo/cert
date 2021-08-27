@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rosemetar</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <style type="text/css" media="print">
+        body {
+            font-size: 12px !important;
+        }
+        
+        .button-table {
+            display: none;
+        }
+        
+        b {
+            font-size: 12px;
+        }
+        
+        .qr-code {
+            width: 135px !important;
+            height: 135px !important;
+            margin-right: -10px !important;
+        }
+        
+        #sg_type {
+            border: none;
+            appearance: none;
+        }
+        
+        .input {
+            border: none;
+            font-family: inherit;
+            font-size: inherit;
+            padding: 0;
+            font-weight: bold;
+        }
+        
+        .form-input {
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row main-div">
+            <table class="">
+                <tr>
+                    <td style="width: 20%;" colspan="2" style="padding-right: 20px;">
+                        <div style="margin-bottom: 80px;">
+                            <b>Maharashtra</b>
+                        </div>
+                    </td>
+                    <td colspan="2" style="text-align: center;">
+                        <h3 style="line-height: 20pt;">Rosmerta Autotech Pvt. Ltd.</h3>
+                        <b> Corporate Off : 137, Udyog Vihar, Phase-1, Gurgaon-122016
+                        <br> Branch Off : Shop No 3 & 4 Ramdas complex Behind R K Tower,<br>
+                        kanchan Gaon Thakurli (East) , Thane - 421201</b>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="content">
+                        </label>
+                            <div class="col-sm-10 mx-auto">
+                                <input hidden type="text" size="300" maxlength="300" class="form-control" id="content" placeholder="Enter content" />
+                            </div>
+                        </div>
+                    </td>
+                    <td colspan="2">
+                        <div class="qr-code" style="float: right;">
+                            <img src="https://chart.googleapis.com/chart?cht=qr&chl=Hello+World&chs=165x165&chld=L|0" class="qr-code img-responsive" />
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        SR. NO :
+                        <span id="serial_no" class="input" role="textbox" contenteditable>MH/21-22/SS/025168</span>
+                    </td>
+                    <td style="text-align: right;" colspan="3">
+                        Date :
+                        <span id="date" class="input" role="textbox" contenteditable>00/00/0000</span><br> Next Due Date :
+                        <span id="next_due_date" class="input" role="textbox" contenteditable>00/00/0000</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="6" class="text-center">
+                        <u style="font-weight: 500;"> Re-Calibration/Renewal</u>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="6">
+                        <u>First Party</u><br> Rules of Agreement made on this date <span id="agreement_date" class="input" role="textbox" contenteditable>00/00/0000</span> between M/s ROSMERTA AUTOTECH PVT. LTD. <br> 137,Udyog Vihar, Phase-1, Gurgaon(Haryana),
+                        INDIA (hereinafter called the 'the Company'). <br>
+                        <u>Second Party</u><br> Whereas, AS THE CUSTOMER <span id="customer" class="input" role="textbox" contenteditable>POORVA TOURS AND TRAVELS</span>
+
+                        <br> Address : <span id="address" class="input" role="textbox" contenteditable>PUNE</span>
+
+                        <br> This certificate is issued by Retrofitter. <br> Is serious for re-calibration of 1 (one) unit of speed governor (MSG) Brand make,installed in Vehicle No. <br> The re-calibration & renewal shall be valid as per specified state
+                        Rules (amended time to time) starting from <br>
+                        <span id="from_date" class="input" role="textbox" contenteditable></span> to
+                        <span id="to_date" class="input" role="textbox" contenteditable></span>
+                    </td>
+                </tr>
+                <tr>
+                    <table class="">
+                        <tr>
+                            <td colspan="4">
+                                <br> A detail of Vehicle and customer is as follow :- <br>
+                                <b>Vehicle Details :-</b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Vehicle No
+                                <br> Chassis No
+                                <br> Engine No
+                                <br> MFG. Year
+                            </td>
+                            <td>
+                                : <span id="vehicle_no" class="input" role="textbox" contenteditable>MH14GD3836</span>
+                                <br> : <span id="chassis_no" class="input" role="textbox" contenteditable>C38096</span>
+                                <br> : <span id="engine_no" class="input" role="textbox" contenteditable>954416</span>
+                                <br> : <span id="mfg_year" class="input" role="textbox" contenteditable>2017</span>
+                            </td>
+                            <td>
+                                Vehicle(Make)
+                                <br> Vehicle(Model)
+                                <br> Registration Date
+                                <br> Last fitness Date
+                            </td>
+                            <td>
+                                : <span id="vehicle_make" class="input" role="textbox" contenteditable>MARUTI</span>
+                                <br> : <span id="vehicle_model" class="input" role="textbox" contenteditable>MARUTI SUZUKI WAGONR GREEN LXI, BS-IV</span>
+                                <br> : <span id="reg_date" class="input" role="textbox" contenteditable>07/08/2017</span>
+                                <br> : <span id="last_fitness_date" class="input" role="textbox" contenteditable>16/07/2018</span>
+                            </td>
+                            <!-- <td style="width: 50%;">
+                            Vehicle No : <span id="vehicle_no" class="input" role="textbox" contenteditable>MH14GD3836</span>
+                            <br>
+                            Chassis No : <span id="chassis_no" class="input" role="textbox" contenteditable>C38096</span>
+                            <br>
+                            Engine No : <span id="engine_no" class="input" role="textbox" contenteditable>954416</span>
+                            <br>
+                            MFG. Year : <span id="mfg_year" class="input" role="textbox" contenteditable>2017</span>
+                        </td>
+                        <td>
+                            Vehicle(Make) : <span id="vehicle_make" class="input" role="textbox" contenteditable>MARUTI</span>
+                            <br>
+                            Vehicle(Model) : <span id="vehicle_model" class="input" role="textbox" contenteditable>MARUTI SUZUKI WAGONR GREEN LXI, BS-IV</span>
+                            <br>
+                            Registration Date : <span id="reg_date" class="input" role="textbox"
+                                contenteditable>07/08/2017</span>
+                            <br>
+                            Last fitness Date :<span id="last_fitness_date" class="input" role="textbox"
+                                contenteditable>16/07/2018</span>
+                            <br>
+                        </td> -->
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <b>Vehicle owner details :-</b> <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Owner Name
+                                <br> E-mail ID
+
+                            </td>
+                            <td>
+                                : <span id="owner_name" class="input" role="textbox" contenteditable>POORVA TOURS AND TRAVELS</span>
+                                <br> : <span id="email" class="input" role="textbox" contenteditable>abc.com</span>
+                            </td>
+                            <td>
+                                Owner Address
+                                <br> Contact No
+                            </td>
+                            <td>
+                                : <span id="owner_address" class="input" role="textbox" contenteditable>PUNE</span>
+                                <br> : <span id="contact_no" class="input" role="textbox" contenteditable>9892848776</span>
+                            </td>
+                            <!-- <td>
+                            Owner Name : <span id="owner_name" class="input" role="textbox" contenteditable>POORVA TOURS AND TRAVELS</span>
+                            <br>
+                            E-mail ID : <span id="email" class="input" role="textbox" contenteditable>abc.com</span>
+                        </td>
+                        <td>
+                            Owner Address : <span id="owner_address" class="input" role="textbox"
+                            contenteditable>PUNE</span>
+                            <br>
+                            Contact No : <span id="contact_no" class="input" role="textbox"
+                            contenteditable>9892848776</span>
+                        </td> -->
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <b>Speed Governor details :-</b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 12%;">
+                                Unit/ECU No
+                                <br> SG Type
+                                <br> Roto Seal
+                            </td>
+                            <td style="width: 33%;">
+                                : <span id="unit_no" class="input" role="textbox" contenteditable>52650</span>
+                                <br> :
+                                <select id="sg_type">
+                                <option value="CABLE TYPE">CABLE TYPE</option>
+                                <option value="ELECTRONIC TYPE">ELECTRONIC TYPE</option>
+                                <option value="FUEL TYPE">FUEL TYPE</option>
+                            </select>
+                                <br> : <span id="roto_seal" class="input" role="textbox" contenteditable>SG071979</span>
+                            </td>
+                            <td style="width: 15%;">
+                                SG Model
+                                <br> TAC No
+                                <br> REPORT No
+                            </td>
+                            <td style="width: 40%;">
+                                : <span id="sg_model" class="input" role="textbox" contenteditable>MSG-CT-9</span>
+                                <br> : <span id="tac_no" class="input" role="textbox" contenteditable>CA 1190</span>
+                                <br> : <span id="report_no" class="input" role="textbox" contenteditable>CT0VM1255</span>
+                            </td>
+                            <!-- <td>
+                            Unit/ECU No : <span id="unit_no" class="input" role="textbox" contenteditable>52650</span>
+                            <br>
+                            SG Type :
+                            <select id="sg_type">
+                                <option value="CABLE TYPE">CABLE TYPE</option>
+                                <option value="ELECTRONIC TYPE">ELECTRONIC TYPE</option>
+                                <option value="FUEL TYPE">FUEL TYPE</option>
+                            </select>
+                            <br>
+                            Roto Seal : <span id="roto_seal" class="input" role="textbox" contenteditable>SG071979</span>
+                        </td>
+                        <td>
+                            SG Model : <span id="sg_model" class="input" role="textbox" contenteditable>MSG-CT-9</span>
+                            <br>
+                            TAC No : <span id="tac_no" class="input" role="textbox" contenteditable>CA 1190</span>
+                            <br>
+                            REPORT No : <span id="report_no" class="input" role="textbox" contenteditable>CT0VM1255</span>
+                        </td> -->
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <b>Images</b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <div class="image-upload-one d-inline-block">
+                                    <div class="center">
+                                        <div class="form-input">
+                                            <label for="file-ip-1">
+                                      <img id="file-ip-1-preview" src="https://i.ibb.co/ZVFsg37/default.png">
+                                      
+                                    </label>
+                                            <input type="file" name="img_one" id="file-ip-1" accept="image/*" onchange="showPreviewOne(event);">
+                                            <button type="button" class="reset_img" id="reset_img_1" onclick="myImgRemoveFunctionOne()">Reset</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="image-upload-one d-inline-block">
+                                    <div class="center">
+                                        <div style="margin-left: 20px;" class="form-input">
+                                            <label for="file-ip-2">
+                                      <img id="file-ip-2-preview" src="https://i.ibb.co/ZVFsg37/default.png">
+                                      
+                                    </label>
+                                            <input type="file" name="img_two" id="file-ip-2" accept="image/*" onchange="showPreviewTwo(event);">
+                                            <button type="button" class="reset_img" id="reset_img_2" onclick="myImgRemoveFunctionTwo()">Reset</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    This is to certify the Vehicle is resealed in my presence and Electronic Speed Governor is working at speed of <span id="speed" class="input" role="textbox" contenteditable>60</span> (+2%) KMPH. <br>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <table class="table-bordered content-table text-center">
+                                    <tr>
+                                        <th>Periodic Check (Every 3 months)
+                                        </th>
+                                        <th>Propose Date Of visit</th>
+                                        <th>Calibration recheck No./Date
+                                        </th>
+                                        <th>Signature and Stamp</th>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <span class="input" id="propose_date_1" role="textbox" contenteditable>00/00/0000</span>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <span class="input" id="propose_date_2" role="textbox" contenteditable>00/00/0000</span>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <span class="input" id="propose_date_3" role="textbox" contenteditable>00/00/0000</span>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <span class="input" id="propose_date_4" role="textbox" contenteditable>00/00/0000</span>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </tr>
+                <tr>
+
+                </tr>
+            </table>
+        </div>
+    </div>
+    <table class="button-table mt-5 mb-5">
+        <tr>
+            <td style="text-align: center;">
+                <button style="width: 100px;" type="button" id="print" onclick="printDiv()" class="btn btn-info mright5"><b>Print</b></button>
+            </td>
+        </tr>
+    </table>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.js">
+</script>
+
+<script>
+    $(document).on('keyup', '#date, #from_date', function() {
+        $('#date, #from_date').not(this).html(this.innerHTML);
+    })
+    $(document).on('keyup', '#next_due_date, #to_date', function() {
+        $('#next_due_date, #to_date').not(this).html(this.innerHTML);
+    })
+    $(document).on('keyup', '#customer, #owner_name', function() {
+        $('#customer, #owner_name').not(this).html(this.innerHTML);
+    })
+    $(document).on('keyup', '#address, #owner_address', function() {
+        $('#address, #owner_address').not(this).html(this.innerHTML);
+    })
+
+    //js function to add date
+    function add_days_to_current_date(days) {
+        let todate = new Date();
+        todate.setDate(todate.getDate() + days);
+
+        return todate;
+    }
+
+    //js function to format date
+    function change_date_format(required_date) {
+        var today = new Date(required_date);
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0');
+        var yyyy = today.getFullYear();
+        today = dd + '/' + mm + '/' + yyyy;
+
+        return today;
+    }
+
+    $(document).ready(function() {
+
+        today = change_date_format(new Date);
+        nextYear = change_date_format(add_days_to_current_date(365));
+
+        $('#date').html(today);
+        $('#agreement_date').html(today);
+        $('#from_date').html(today);
+        $('#next_due_date').html(nextYear);
+        $('#to_date').html(nextYear);
+
+        $('#propose_date_1').html(change_date_format(add_days_to_current_date(90)));
+        $('#propose_date_2').html(change_date_format(add_days_to_current_date(180)));
+        $('#propose_date_3').html(change_date_format(add_days_to_current_date(270)));
+        $('#propose_date_4').html(change_date_format(add_days_to_current_date(365)));
+
+
+    })
+
+    let reset = document.getElementsByClassName("reset_img");
+    let reset_1 = document.getElementById("reset_img_1");
+    let reset_2 = document.getElementById("reset_img_2");
+
+    function showPreviewOne(event) {
+        if (event.target.files.length > 0) {
+            let src = URL.createObjectURL(event.target.files[0]);
+            let preview = document.getElementById("file-ip-1-preview");
+            preview.src = src;
+            preview.style.display = "block";
+            reset_1.style.display = "block";
+        }
+    }
+
+    function myImgRemoveFunctionOne() {
+        document.getElementById("file-ip-1-preview").src = "https://i.ibb.co/ZVFsg37/default.png";
+        reset_1.style.display = "none";
+    }
+
+    function showPreviewTwo(event) {
+        if (event.target.files.length > 0) {
+            let src = URL.createObjectURL(event.target.files[0]);
+            let preview = document.getElementById("file-ip-2-preview");
+            preview.src = src;
+            preview.style.display = "block";
+            reset_2.style.display = "block";
+        }
+    }
+
+    function myImgRemoveFunctionTwo() {
+        document.getElementById("file-ip-2-preview").src = "https://i.ibb.co/ZVFsg37/default.png";
+        reset_2.style.display = "none";
+    }
+
+    function printDiv() {
+
+        // reset.style.display = "none";
+        $(".reset_img").css({
+            "display": "none"
+        });
+        window.print();
+    }
+
+    // Function to HTML encode the text
+    // This creates a new hidden element,
+    // inserts the given text into it 
+    // and outputs it out as HTML
+    function htmlEncode(value) {
+        return $('<div/>').text(value)
+            .html();
+    }
+
+    function qr_code_data() {
+        var SerialNo = 'SerialNo:' + $('#serial_no').html() + ',';
+        var Date = 'Date:' + $('#date').html() + ',';
+        var NextDueDate = 'NextDueDate:' + $('#next_due_date').html() + ',';
+        var Customer = 'Customer:' + $('#customer').html() + ',';
+        var Address = 'Address:' + $('#address').html() + ',';
+        var FromDate = 'FromDate:' + $('#from_date').html() + ',';
+        var ToDate = 'ToDate:' + $('#to_date').html() + ',';
+        var VehicleNo = 'VehicleNo:' + $('#vehicle_no').html() + ',';
+        var ChassisNo = 'ChassisNo:' + $('#chassis_no').html() + ',';
+        var EngineNo = 'EngineNo:' + $('#engine_no').html() + ',';
+        var MfgYear = 'MfgYear:' + $('#mfg_year').html() + ',';
+        var VehicleMake = 'VehicleMake:' + $('#vehicle_make').html() + ',';
+        var VehicleModel = 'VehicleModel:' + $('#vehicle_model').html() + ',';
+        var RegDate = 'RegDate:' + $('#reg_date').html() + ',';
+        var LastFitnessDate = 'LastFitnessDate:' + $('#last_fitness_date').html() + ',';
+        var OwnerName = 'OwnerName:' + $('#owner_name').html() + ',';
+        var OwnerAddress = 'OwnerAddress:' + $('#owner_address').html() + ',';
+        var Email = 'Email:' + $('#email').html() + ',';
+        var ContactNo = 'ContactNo:' + $('#contact_no').html() + ',';
+        var UnitNo = 'UnitNo:' + $('#unit_no').html() + ',';
+        var SgType = 'SgType:' + $('#sg_type').val() + ',';
+        var RotoSeal = 'RotoSeal:' + $('#roto_seal').html() + ',';
+        var SgModel = 'SgModel:' + $('#sg_model').html() + ',';
+        var TacNo = 'TacNo:' + $('#tac_no').html() + ',';
+        var ReportNo = 'ReportNo:' + $('#report_no').html();
+        // var Speed = 'Speed:'+$('#speed').html();
+
+        var content = SerialNo + Date + NextDueDate + Customer + Address + VehicleNo + ChassisNo + EngineNo + MfgYear + VehicleMake + VehicleModel + RegDate + LastFitnessDate + Email + ContactNo + UnitNo + SgType + RotoSeal + SgModel + TacNo + ReportNo;
+        $('#content').val(content);
+        $('#content').trigger("change");
+    }
+
+    $(function() {
+
+
+        $('.input').keyup(function() {
+
+            qr_code_data();
+
+        })
+        $('#sg_type').change(function() {
+
+            qr_code_data();
+
+        })
+
+        // Specify an onclick function
+        // for the generate button
+        //   $('#generate').click(function () {
+        $('#content').change(function() {
+
+            // Generate the link that would be
+            // used to generate the QR Code
+            // with the given data 
+            let finalURL =
+                'https://chart.googleapis.com/chart?cht=qr&chl=' +
+                htmlEncode($('#content').val()) +
+                '&chs=180x180&chld=L|0'
+
+            // Replace the src of the image with
+            // the QR code image
+            $('.qr-code').attr('src', finalURL);
+            $('.qr-code').css({
+                "margin-top": "-5px",
+                "margin-right": "-5px"
+            });
+        });
+    });
+</script>
+
+</html>

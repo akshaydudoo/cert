@@ -1,0 +1,70 @@
+.input {
+    border: 1px solid #ccc;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 1px 6px;
+}
+
+.center {
+    display: inline;
+    margin: 3px;
+}
+
+.form-input {
+    position: relative;
+    width: 150px;
+    padding: 3px;
+    background: #fff;
+    border: 2px dashed dodgerblue;
+}
+
+.form-input input {
+    display: none;
+}
+
+.form-input label {
+    display: block;
+    width: 135px;
+    height: auto;
+    max-height: 130px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.form-input img {
+    width: 135px;
+    height: 127px;
+    margin: 2px;
+}
+
+.reset_img {
+    display: none;
+    border: none;
+    width: 140px;
+    position: absolute;
+    top: 110px;
+    background: #fd9800;
+}
+
+.content-table {
+    margin: auto;
+    table-layout: auto;
+    width: 70% !important;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.button-table {
+    margin: auto;
+    table-layout: auto;
+    width: 70% !important;
+}
+
+.main-div {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+div.rig {
+    text-align: right;
+}
