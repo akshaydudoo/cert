@@ -386,34 +386,34 @@
     }
 
     function qr_code_data() {
-        var SerialNo = 'SerialNo:' + $('#serial_no').html() + ',';
-        var Date = 'Date:' + $('#date').html() + ',';
-        var NextDueDate = 'NextDueDate:' + $('#next_due_date').html() + ',';
-        var Customer = 'Customer:' + $('#customer').html() + ',';
-        var Address = 'Address:' + $('#address').html() + ',';
-        var FromDate = 'FromDate:' + $('#from_date').html() + ',';
-        var ToDate = 'ToDate:' + $('#to_date').html() + ',';
-        var VehicleNo = 'VehicleNo:' + $('#vehicle_no').html() + ',';
-        var ChassisNo = 'ChassisNo:' + $('#chassis_no').html() + ',';
-        var EngineNo = 'EngineNo:' + $('#engine_no').html() + ',';
-        var MfgYear = 'MfgYear:' + $('#mfg_year').html() + ',';
-        var VehicleMake = 'VehicleMake:' + $('#vehicle_make').html() + ',';
-        var VehicleModel = 'VehicleModel:' + $('#vehicle_model').html() + ',';
-        var RegDate = 'RegDate:' + $('#reg_date').html() + ',';
-        var LastFitnessDate = 'LastFitnessDate:' + $('#last_fitness_date').html() + ',';
-        var OwnerName = 'OwnerName:' + $('#owner_name').html() + ',';
-        var OwnerAddress = 'OwnerAddress:' + $('#owner_address').html() + ',';
-        var Email = 'Email:' + $('#email').html() + ',';
-        var ContactNo = 'ContactNo:' + $('#contact_no').html() + ',';
-        var UnitNo = 'UnitNo:' + $('#unit_no').html() + ',';
-        var SgType = 'SgType:' + $('#sg_type').val() + ',';
-        var RotoSeal = 'RotoSeal:' + $('#roto_seal').html() + ',';
-        var SgModel = 'SgModel:' + $('#sg_model').html() + ',';
-        var TacNo = 'TacNo:' + $('#tac_no').html() + ',';
-        var ReportNo = 'ReportNo:' + $('#report_no').html();
-        // var Speed = 'Speed:'+$('#speed').html();
+        var SerialNo = 'SerialNo:' + $('#serial_no').html() + '/';
+        var Date = 'Date:' + $('#date').html() + '/';
+        var NextDueDate = 'NextDueDate:' + $('#next_due_date').html() + '/';
+        var Customer = 'Customer:' + $('#customer').html() + '/';
+        var Address = 'Address:' + $('#address').html() + '/';
+        var FromDate = 'FromDate:' + $('#from_date').html() + '/';
+        var ToDate = 'ToDate:' + $('#to_date').html() + '/';
+        var VehicleNo = 'VehicleNo:' + $('#vehicle_no').html() + '/';
+        var ChassisNo = 'ChassisNo:' + $('#chassis_no').html() + '/';
+        var EngineNo = 'EngineNo:' + $('#engine_no').html() + '/';
+        var MfgYear = 'MfgYear:' + $('#mfg_year').html() + '/';
+        var VehicleMake = 'VehicleMake:' + $('#vehicle_make').html() + '/';
+        var VehicleModel = 'VehicleModel:' + $('#vehicle_model').html() + '/';
+        var RegDate = 'RegDate:' + $('#reg_date').html() + '/';
+        var LastFitnessDate = 'LastFitnessDate:' + $('#last_fitness_date').html() + '/';
+        var OwnerName = 'OwnerName:' + $('#owner_name').html() + '/';
+        var OwnerAddress = 'OwnerAddress:' + $('#owner_address').html() + '/';
+        var Email = 'Email:' + $('#email').html() + '/';
+        var ContactNo = 'ContactNo:' + $('#contact_no').html() + '/';
+        var UnitNo = 'UnitNo:' + $('#unit_no').html() + '/';
+        var SgType = 'SgType:' + $('#sg_type').val() + '/';
+        var RotoSeal = 'RotoSeal:' + $('#roto_seal').html() + '/';
+        var SgModel = 'SgModel:' + $('#sg_model').html() + '/';
+        var TacNo = 'TacNo:' + $('#tac_no').html() + '/';
+        var ReportNo = 'ReportNo:' + $('#report_no').html() + '/';
+        var Speed = 'Speed:' + $('#speed').html();
 
-        var content = SerialNo + Date + NextDueDate + Customer + Address + VehicleNo + ChassisNo + EngineNo + MfgYear + VehicleMake + VehicleModel + RegDate + LastFitnessDate + Email + ContactNo + UnitNo + SgType + RotoSeal + SgModel + TacNo + ReportNo;
+        var content = SerialNo + Date + NextDueDate + Customer + Address + VehicleNo + ChassisNo + EngineNo + MfgYear + VehicleMake + VehicleModel + RegDate + LastFitnessDate + Email + ContactNo + UnitNo + SgType + RotoSeal + SgModel + TacNo + ReportNo + Speed;
         $('#content').val(content);
         $('#content').trigger("change");
     }
