@@ -94,7 +94,7 @@
                     <td colspan="6">
                         This agreement made at Maharashtra dated <span id="agreement_date" class="input" role="textbox" contenteditable>00/00/0000</span> between M/s Micro Autotech (First Party) and the customer Mr./M/s <span id="customer" class="input"
                             role="textbox" contenteditable>POORVA TOURS AND TRAVELS</span> Address : <span id="address" class="input" role="textbox" contenteditable>PUNE</span> Hereinafter called the second party. This contract is for repair and maintenance
-                        of 1(one) unit of Speed Limiter Device no. 13660 installed in Vehicle No. <span id="vehicle_no" class="input" role="textbox" contenteditable>MH14GD3836</span> the contract is for a period of 12 months starting from
+                        of 1(one) unit of Speed Limiter Device no. <span id="unit_no1" class="input" role="textbox" contenteditable>52650</span> installed in Vehicle No. <span id="vehicle_no" class="input" role="textbox" contenteditable>MH14GD3836</span>                        the contract is for a period of 12 months starting from
                         <span id="from_date" class="input" role="textbox" contenteditable></span> to
                         <span id="to_date" class="input" role="textbox" contenteditable></span><br><br>
                     </td>
@@ -151,7 +151,7 @@
                             </td>
                             <td>
                                 : <span id="owner_name" class="input" role="textbox" contenteditable>POORVA TOURS AND TRAVELS</span>
-                                <br> : <span id="email" class="input" role="textbox" contenteditable>abc.com</span>
+                                <br> : <span id="email" class="input" role="textbox" contenteditable>N/A</span>
                             </td>
                             <td>
                                 Owner Address
@@ -224,7 +224,7 @@
                                 <option value="FUEL TYPE">FUEL TYPE</option>
                             </select>
                                 <br> : <span id="roto_seal" class="input" role="textbox" contenteditable>SG071979</span>
-                                <br> : <span id="agree_date" class="input" role="textbox" contenteditable>28/08/2021</span>
+                                <br> : <span id="agree_date" class="input" role="textbox" contenteditable></span>
                             </td>
                             <tr>
                                 <td><br></td>
@@ -279,8 +279,8 @@
 </script>
 
 <script>
-    $(document).on('keyup', '#date, #from_date', function() {
-        $('#date, #from_date').not(this).html(this.innerHTML);
+    $(document).on('keyup', '#date, #from_date, #agree_date', function() {
+        $('#date, #from_date, #agree_date').not(this).html(this.innerHTML);
     })
     $(document).on('keyup', '#next_due_date, #to_date', function() {
         $('#next_due_date, #to_date').not(this).html(this.innerHTML);
@@ -294,6 +294,10 @@
     $(document).on('keyup', '#vehicle_no, #vehicl_no', function() {
         $('#vehicle_no, #vehicl_no').not(this).html(this.innerHTML);
     })
+    $(document).on('keyup', '#unit_no, #unit_no1', function() {
+        $('#unit_no, #unit_no1').not(this).html(this.innerHTML);
+    })
+
 
     //js function to add date
     function add_days_to_current_date(days) {
@@ -324,7 +328,7 @@
         $('#from_date').html(today);
         $('#next_due_date').html(nextYear);
         $('#to_date').html(nextYear);
-
+        $('#agree_date').html(today);
         $('#propose_date_1').html(change_date_format(add_days_to_current_date(90)));
         $('#propose_date_2').html(change_date_format(add_days_to_current_date(180)));
         $('#propose_date_3').html(change_date_format(add_days_to_current_date(270)));
