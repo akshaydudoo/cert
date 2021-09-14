@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ridaus</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <style type="text/css" media="print">
+        body {
+            font-size: 10px !important;
+        }
+        
+        .button-table {
+            display: none;
+        }
+        
+        b {
+            font-size: 10px;
+        }
+        
+        .qr-code {
+            width: 135px !important;
+            height: 135px !important;
+            margin-right: 10px !important;
+        }
+        
+        #sg_type {
+            border: none;
+            appearance: none;
+        }
+        
+        .input {
+            border: none;
+            font-family: inherit;
+            font-size: inherit;
+            padding: 0;
+            font-weight: bold;
+        }
+        
+        .form-input {
+            border: none;
+        }
+        
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        p {
+            margin: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row main-div">
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="content"></label>
+                <div class="col-sm-10 mx-auto">
+                    <input hidden type="text" size="300" maxlength="300" class="form-control" id="content" placeholder="Enter content" />
+                </div>
+            </div>
+            <div>
+                <img src="ridaus.png" class="center">
+            </div>
+            <table border="1" style="border-collapse: collapse; width: 100%;">
+                <tbody>
+                    <tr>
+                        <td style="width: 37.3333%;">
+                            <p><strong><u>Vehicle Details</u></strong></p>
+                            <p>Registration No.:</p>
+                            <p><strong><span id="vehicl_no" class="input" role="textbox" contenteditable>MH14GD3836</span></strong></p>
+                            <p>Chasis No:</p>
+                            <p><strong><span id="chassis_no" class="input" role="textbox" contenteditable>C38096</span></strong></p>
+                            <p>Make /Model:</p>
+                            <p><strong><span id="vehicle_model" class="input" role="textbox" contenteditable>MARUTI SUZUKI GREEN LXI, BS-IV</span></strong></p>
+                        </td>
+                        <td style="width: 37.3333%;">
+                            <p><strong>&nbsp</strong></p>
+                            <p>Registration Date:</p>
+                            <p><strong><span id="reg_date" class="input" role="textbox" contenteditable>07/08/2017</span></strong></p>
+                            <p>Engine No:</p>
+                            <p><strong><span id="engine_no" class="input" role="textbox" contenteditable>954416</span></strong></p>
+                            <p>&nbsp</p>
+                            <p><strong>&nbsp</p>
+                        </td>
+                        <td style="width: 25.3333%; border:black ;border-width:1px,5em; border-left-style:double;">
+                            <div class="qr-code" style="float: right;">
+                                <img src="https://chart.googleapis.com/chart?cht=qr&chl=Hello+World&chs=165x165&chld=L|0" class="qr-code img-responsive" /> </br>
+                                <b border-style: solid;> Certificate No.:<span id="serial_no" class="input" role="textbox" style="font-size: 100%;" contenteditable>MH00067380</span><b>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table border="1" style="width: 100%; border-collapse: collapse; border-style: solid;">
+                <tbody>
+                    <tr>
+                        <td style="width: 33.3333%; text-align: left;">
+                            <p><strong><u>Vehicle Owner Details</u></strong><strong></strong></p>
+                        </td>
+                        <td style="width: 33.3333%; text-align: left;">
+                            <p><strong>&nbsp;</strong></p>
+                        </td>
+                        <td style="width: 33.3333%; text-align: left;">
+                            <p><strong>&nbsp;</strong></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 33.3333%; text-align: left;">
+                            <p>Name :</p>
+                            <p><strong><span id="customer" class="input" role="textbox" contenteditable>POORVA TOURS AND TRAVELS</span></strong></p>
+                        </td>
+                        <td style="width: 33.3333%; text-align: left;">
+                            <p>Mobile :</p>
+                            <p><strong><span id="contact_no" class="input" role="textbox" contenteditable>9892848776</span></strong></p>
+                        </td>
+                        <td style="width: 33.3333%; text-align: left;">
+                            <p>E-mail:</p>
+                            <p><strong><span id="email" class="input" role="textbox" contenteditable>N/A</span></strong></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 33.3333%; text-align: left;">
+                            <p>Address :</p>
+                            <p><strong><span id="address" class="input" role="textbox" contenteditable>PUNE</span><br /></strong></p>
+                        </td>
+                        <td style="width: 33.3333%; text-align: left;">
+                            <p><strong>&nbsp;</strong></p>
+                        </td>
+                        <td style="width: 33.3333%; text-align: left;">
+                            <p><strong>&nbsp;</strong></p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table border="1" style="border-collapse: collapse; width: 100%; height: 100px;">
+                <tbody>
+                    <tr style="height: 49px;">
+                        <td style="width: 33.3333%; height: 49px;">
+                            <p><strong><u >SLD Details</u></strong></p>
+                            <p><strong>&nbsp</strong></p>
+                        </td>
+                        <td style="width: 33.3333%; height: 49px;">
+                            <p><strong>TAC Number :</strong></p>
+                            <p><strong><span id="ecu_no" class="input" role="textbox" contenteditable>CB0733</span></strong></p>
+                        </td>
+                        <td style="width: 33.3333%; height: 49px;">
+                            <p><strong>ECU Number :</strong>
+                                <strong><span id="cop_no" class="input" role="textbox" contenteditable>14720</span></strong></p>
+                            <p>Test Report Number :
+                                <strong><span id="report_no" class="input" role="textbox" contenteditable>CT0VM1255</span></strong></p>
+                        </td>
+
+                    </tr>
+                    <tr style="height: 49px;">
+                        <td style="width: 33.3333%; height: 49px;">
+                            <p><strong>SLD Serial No.:</strong></p>
+                            <p><strong><span id="unit_no" class="input" role="textbox" contenteditable>52650</span></strong></p>
+                        </td>
+                        <td style="width: 33.3333%; height: 49px;">
+                            <p><strong>Fuel Type :</strong></p>
+                            <p><strong><select id="sg_type">
+                                    <option value="CABLE TYPE">CABLE TYPE</option>
+                                    <option value="ELECTRONIC TYPE">ELECTRONIC TYPE</option>
+                                    <option value="FUEL TYPE">FUEL TYPE</option>
+                                </select></strong></p>
+                        </td>
+                        <td style="width: 33.3333%; height: 49px;">
+                            <p><strong>Invoice No.:</strong></p>
+                            <p><strong><span id="inv_no" class="input" role="textbox" contenteditable>212201</span></strong></p>
+                        </td>
+                    </tr>
+                    <tr style="height: 21px;">
+                        <td style="width: 33.3333%; height: 21px;">
+                            <p><strong>Model No.:</strong></p>
+                            <p><strong><span id="sg_model" class="input" role="textbox" contenteditable>MSG-CT-9</span></strong></p>
+                        </td>
+                        <td style="width: 33.3333%; height: 21px;">
+                            <p><strong>Issue Date :</strong></p>
+                            <p><strong><span id="date" class="input" role="textbox" contenteditable>00/00/0000</span></strong></p>
+                        </td>
+                        <td style="width: 33.3333%; height: 21px;">
+                            <p><strong>Invoice Date:</strong></p>
+                            <p><strong><span id="from_date" class="input" role="textbox" contenteditable></span></strong></p>
+                        </td>
+                    </tr>
+                    <tr style="height: 21px;">
+                        <td style="width: 33.3333%; height: 21px;">
+                            <p><strong>Speed :</strong></p>
+                            <p><strong><span id="speed" class="input" role="textbox" contenteditable>60</span></strong></p>
+                        </td>
+                        <td style="width: 33.3333%; height: 21px;">
+                            <p><strong>Renewal Date:</strong></p>
+                            <p><strong><span id="to_date" class="input" role="textbox" contenteditable></span></strong></p>
+                        </td>
+                        <td style="width: 33.3333%; height: 21px;">
+                            <p><strong>Rotor Seal No.:</strong></p>
+                            <p><strong><span id="roto_seal" class="input" role="textbox" contenteditable>SG071979</span></strong></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 33.3333%;"><b>Periodically Check Date</b></td>
+                        <td style="width: 33.3333%;">1. <span class="input" id="propose_date_1" role="textbox" contenteditable>00/00/0000</span>2. <span class="input" id="propose_date_2" role="textbox" contenteditable>00/00/0000</span></td>
+                        <td style="width: 33.3333%;">3.<span class="input" id="propose_date_3" role="textbox" contenteditable>00/00/0000</span>4. <span class="input" id="propose_date_4" role="textbox" contenteditable>00/00/0000</span></td>
+                    </tr>
+                    <tr style="height: 16px;">
+                        <td style="width: 33.3333%; height: 16px;"><strong>Sensor Seal : OK</strong></td>
+                        <td style="width: 33.3333%; height: 16px;"><strong>Speed Sensor Seal : OK</strong></td>
+                        <td style="width: 33.3333%; height: 16px;"><strong>Speed Sensor Seal : OK</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table border="1" style="border-collapse: collapse; width: 100%;">
+                <tbody>
+                    <tr>
+                        <td style="width: 100%;">
+                            <table border="1" style="border-collapse: collapse; width: 100%; height: 42px;">
+                                <tbody>
+                                    <tr style="height: 16px;">
+                                        <td style="width: 100%; height: 16px;">
+                                            <strong>Installed By : <span id="dist_name" class="input" role="textbox" contenteditable>Kamble</span></strong>
+                                        </td>
+                                    </tr>
+                                    <tr style="height: 16px;">
+                                        <td style="width: 100%; height: 16px;"><strong>Address : <span id="dist_address" class="input" role="textbox" contenteditable>baramati</span></strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div>
+                <br><br>
+                <BR>
+                <table style="border-collapse: collapse; width: 100%; height: 21px; text-decoration: overline ;">
+                    <tbody>
+                        <tr style="height: 21px;">
+                            <td style="width: 33.3333%; height: 21px; text-align: center;"><strong>Signature of Customer</strong></td>
+                            <td style="width: 37.7919%; height: 21px; text-align: center;"><strong>Signature of RTA/RTO/STA</strong></td>
+                            <td style="width: 28.8747%; height: 21px; text-align: center;"><strong>Signature of Installer</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <table class="button-table mt-5 mb-5">
+            <tr>
+                <td style="text-align: center;">
+                    <button style="width: 100px;" type="button" id="print" onclick="printDiv()" class="btn btn-info mright5"><b>Print</b></button>
+                </td>
+            </tr>
+        </table>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.js">
+</script>
+
+<script>
+    $(document).on('keyup', '#date, #from_date', function() {
+        $('#date, #from_date').not(this).html(this.innerHTML);
+    })
+    $(document).on('keyup', '#next_due_date, #to_date', function() {
+        $('#next_due_date, #to_date').not(this).html(this.innerHTML);
+    })
+    $(document).on('keyup', '#customer, #owner_name', function() {
+        $('#customer, #owner_name').not(this).html(this.innerHTML);
+    })
+    $(document).on('keyup', '#address, #owner_address', function() {
+        $('#address, #owner_address').not(this).html(this.innerHTML);
+    })
+    $(document).on('keyup', '#vehicle_no, #vehicl_no', function() {
+        $('#vehicle_no, #vehicl_no').not(this).html(this.innerHTML);
+    })
+
+    //js function to add date
+    function add_days_to_current_date(days) {
+        let todate = new Date();
+        todate.setDate(todate.getDate() + days);
+
+        return todate;
+    }
+
+    //js function to format date
+    function change_date_format(required_date) {
+        var today = new Date(required_date);
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0');
+        var yyyy = today.getFullYear();
+        today = dd + '/' + mm + '/' + yyyy;
+
+        return today;
+    }
+
+    $(document).ready(function() {
+
+        today = change_date_format(new Date);
+        nextYear = change_date_format(add_days_to_current_date(365));
+
+        $('#date').html(today);
+        $('#agreement_date').html(today);
+        $('#from_date').html(today);
+        $('#next_due_date').html(nextYear);
+        $('#to_date').html(nextYear);
+
+        $('#propose_date_1').html(change_date_format(add_days_to_current_date(90)));
+        $('#propose_date_2').html(change_date_format(add_days_to_current_date(180)));
+        $('#propose_date_3').html(change_date_format(add_days_to_current_date(270)));
+        $('#propose_date_4').html(change_date_format(add_days_to_current_date(365)));
+
+
+    })
+
+    let reset = document.getElementsByClassName("reset_img");
+    let reset_1 = document.getElementById("reset_img_1");
+    let reset_2 = document.getElementById("reset_img_2");
+
+    function showPreviewOne(event) {
+        if (event.target.files.length > 0) {
+            let src = URL.createObjectURL(event.target.files[0]);
+            let preview = document.getElementById("file-ip-1-preview");
+            preview.src = src;
+            preview.style.display = "block";
+            reset_1.style.display = "block";
+        }
+    }
+
+    function myImgRemoveFunctionOne() {
+        document.getElementById("file-ip-1-preview").src = "https://i.ibb.co/ZVFsg37/default.png";
+        reset_1.style.display = "none";
+    }
+
+    function showPreviewTwo(event) {
+        if (event.target.files.length > 0) {
+            let src = URL.createObjectURL(event.target.files[0]);
+            let preview = document.getElementById("file-ip-2-preview");
+            preview.src = src;
+            preview.style.display = "block";
+            reset_2.style.display = "block";
+        }
+    }
+
+    function myImgRemoveFunctionTwo() {
+        document.getElementById("file-ip-2-preview").src = "https://i.ibb.co/ZVFsg37/default.png";
+        reset_2.style.display = "none";
+    }
+
+    function printDiv() {
+
+        // reset.style.display = "none";
+        $(".reset_img").css({
+            "display": "none"
+        });
+        window.print();
+    }
+
+    // Function to HTML encode the text
+    // This creates a new hidden element,
+    // inserts the given text into it 
+    // and outputs it out as HTML
+    function htmlEncode(value) {
+        return $('<div/>').text(value)
+            .html();
+    }
+
+    function qr_code_data() {
+        var SerialNo = 'SerialNo:' + $('#serial_no').html() + '/';
+        var Date = 'Date:' + $('#date').html() + '/';
+        var NextDueDate = 'NextDueDate:' + $('#to_date').html() + '/';
+        var Customer = 'Customer:' + $('#customer').html() + '/';
+        var Address = 'Address:' + $('#address').html() + '/';
+        var FromDate = 'FromDate:' + $('#from_date').html() + '/';
+        var ToDate = 'ToDate:' + $('#to_date').html() + '/';
+        var VehicleNo = 'VehicleNo:' + $('#vehicl_no').html() + '/';
+        var ChassisNo = 'ChassisNo:' + $('#chassis_no').html() + '/';
+        var EngineNo = 'EngineNo:' + $('#engine_no').html() + '/';
+        var MfgYear = 'MfgYear:' + $('#mfg_year').html() + '/';
+        var VehicleMake = 'VehicleMake:' + $('#vehicle_make').html() + '/';
+        var VehicleModel = 'VehicleModel:' + $('#vehicle_model').html() + '/';
+        var RegDate = 'RegDate:' + $('#reg_date').html() + '/';
+        var LastFitnessDate = 'LastFitnessDate:' + $('#last_fitness_date').html() + '/';
+        var OwnerName = 'Installed by:' + $('#dist_name').html() + '/';
+        var OwnerAddress = 'OwnerAddress:' + $('#owner_address').html() + '/';
+        var Email = 'Email:' + $('#email').html() + '/';
+        var ContactNo = 'ContactNo:' + $('#contact_no').html() + '/';
+        var UnitNo = 'UnitNo:' + $('#unit_no').html() + '/';
+        var SgType = 'SgType:' + $('#sg_type').val() + '/';
+        var RotoSeal = 'RotoSeal:' + $('#roto_seal').html() + '/';
+        var SgModel = 'SgModel:' + $('#sg_model').html() + '/';
+        var TacNo = 'Inv No.' + $('#inv_no').html() + '/';
+        var ReportNo = 'ReportNo:' + $('#report_no').html() + '/';
+        var Speed = 'Speed:' + $('#speed').html();
+
+        var content = SerialNo + Date + NextDueDate + OwnerName + Customer + Address + VehicleNo + ChassisNo + EngineNo + VehicleModel + RegDate + Email + ContactNo + UnitNo + SgType + RotoSeal + SgModel + TacNo + ReportNo + Speed;
+        $('#content').val(content);
+        $('#content').trigger("change");
+    }
+
+    $(function() {
+
+
+        $('.input').keyup(function() {
+
+            qr_code_data();
+
+        })
+        $('#sg_type').change(function() {
+
+            qr_code_data();
+
+        })
+
+        // Specify an onclick function
+        // for the generate button
+        //   $('#generate').click(function () {
+        $('#content').change(function() {
+
+            // Generate the link that would be
+            // used to generate the QR Code
+            // with the given data 
+            let finalURL =
+                'https://chart.googleapis.com/chart?cht=qr&chl=' +
+                htmlEncode($('#content').val()) +
+                '&chs=180x180&chld=L|0'
+
+            // Replace the src of the image with
+            // the QR code image
+            $('.qr-code').attr('src', finalURL);
+            $('.qr-code').css({
+                "margin-top": "-5px",
+                "margin-right": "-5px"
+            });
+        });
+    });
+</script>
+
+</html>
